@@ -1,10 +1,21 @@
+h1 {
+    text-align: center;
+}
+
+/* centers the heroes including the search bars */
+.is-success {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* changes the background image */
 .is-halfheight {
     background-image: url('https://images.unsplash.com/photo-1511497584788-876760111969?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80');
     width: 100%;
     margin-top: 100px;
 }
-
-/* .field {
-    object-fit: contain;
-    justify-content: center;
-} */
