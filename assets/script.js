@@ -22,7 +22,7 @@ for(var i = 0; i < parksData.length; i++) {
 }
 
 
-$('#searchBtn').on('click', function(e) {
+$('select').change(function(e) {
     e.preventDefault();
     getState();
 })
