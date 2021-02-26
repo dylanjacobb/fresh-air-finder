@@ -2,27 +2,25 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-  <link rel="stylesheet" href="assets/style.css">
-  <title>Fresh Air Finder</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Fresh Air Finder</title>
 </head>
 
 <body>
-  <section class="hero header">
-    <div class="hero-body">
-      <h1 class="title">
-        Fresh Air Finder
-      </h1>
-      <h2 class="subtitle">Find Your States National Parks</h2>
-    </div>
+    <section class="hero header">
+        <div class="hero-body">
+            <h1 class="title">
+                Fresh Air Finder
+            </h1>
+            <h2 class="subtitle">Find Your States National Parks</h2>
+        </div>
   </section>
-
-
   <section class="hero is-success is-halfheight">
     <div class="hero-body">
       <div class="">
@@ -84,19 +82,19 @@
                 <option>WY</option>
               </select>
               <a class="director" href="#test">Take me to the parks</a>
+                        </div>
+                        <span class="icon is-medium is-left">
+                            <i class="fas fa-globe"></i>
+                        </span>
+                    </div>
+                    <div class="control">
+                    </div>
+                </div>
             </div>
-            <span class="icon is-medium is-left">
-              <i class="fas fa-globe"></i>
-            </span>
-          </div>
-          <div class="control">
-          </div>
-        </div>
-      </div>
-  </section>
-  <section class="container">
-    <div class="tile is-parent is-4">
-      <article class="tile is-child notification is-primary">
+    </section>
+    <!-- for the list of parks -->
+    <section class="section is-medium">
+        <h3 id="list-section">National Park List</h3>
         <ul id="parks-list">
         </ul>
       </article>
@@ -129,11 +127,26 @@
           </article>
         </div>
       </div>
-
+    </section>
+    <!-- modals for the list of national parks -->
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Modal title</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <!-- Content ... -->
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">Save changes</button>
+                <button class="button">Cancel</button>
+            </footer>
+        </div>
     </div>
-  </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="assets/script.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/script.js"></script>
 </body>
-
 </html>
