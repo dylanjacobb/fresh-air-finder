@@ -68,3 +68,11 @@ body {
 .parkBtn {
     color: rgb(225, 200, 169);
 }
+
+/* hides the dropdown arrow */
+.select:not(.is-multiple):not(.is-loading)::after {
+    border-color: #3273dc;
+    right: 1.125em;
+    z-index: 4;
+    display: none;
+}

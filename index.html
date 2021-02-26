@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="assets/style.css">
     <title>Fresh Air Finder</title>
@@ -18,7 +18,7 @@
             <h1 class="title">
                 Fresh Air Finder
             </h1>
-            <h2 class= "subtitle">Find Your States National Parks</h2>
+            <h2 class="subtitle">Find Your States National Parks</h2>
         </div>
     </section>
 
@@ -28,77 +28,98 @@
                 <div class="field has-addons">
                     <div class="control has-icons-left">
                         <div class="select is-medium">
-                          <select id="state-code">
-                            <option class="input" id="state" type="text" selected>State</option>
-                            <option>AL</option>
-                            <option>AK</option>
-                            <option>AS</option>
-                            <option>AZ</option>
-                            <option>AR</option>   
-                            <option>CA</option>
-                            <option>CO</option>
-                            <option>CT</option>
-                            <option>DE</option>
-                            <option>FL</option>
-                            <option>GA</option>
-                            <option>HI</option>
-                            <option>ID</option>
-                            <option>IL</option>
-                            <option>IN</option>
-                            <option>IA</option>
-                            <option>KS</option>
-                            <option>KY</option>
-                            <option>LA</option>
-                            <option>ME</option>
-                            <option>MD</option>
-                            <option>MA</option>
-                            <option>MI</option>
-                            <option>MN</option>
-                            <option>MS</option>
-                            <option>MO</option>
-                            <option>MT</option>
-                            <option>NE</option>
-                            <option>NV</option>
-                            <option>NH</option>
-                            <option>NJ</option>
-                            <option>NM</option>
-                            <option>NY</option>
-                            <option>NC</option>
-                            <option>ND</option>
-                            <option>OH</option>
-                            <option>OK</option>
-                            <option>OR</option>
-                            <option>PA</option>
-                            <option>RI</option>
-                            <option>SC</option>
-                            <option>SD</option>
-                            <option>TN</option>
-                            <option>TX</option>
-                            <option>UT</option>
-                            <option>VT</option>
-                            <option>VA</option>
-                            <option>WA</option>
-                            <option>WV</option>
-                            <option>WI</option>
-                            <option>WY</option>
-                        </select>
-                        <a class="director" href="#test">Take me to the parks</a>                        
+                            <select id="state-code">
+                                <option class="input" id="state" type="text" selected>State</option>
+                                <option>AL</option>
+                                <option>AK</option>
+                                <option>AS</option>
+                                <option>AZ</option>
+                                <option>AR</option>
+                                <option>CA</option>
+                                <option>CO</option>
+                                <option>CT</option>
+                                <option>DE</option>
+                                <option>FL</option>
+                                <option>GA</option>
+                                <option>HI</option>
+                                <option>ID</option>
+                                <option>IL</option>
+                                <option>IN</option>
+                                <option>IA</option>
+                                <option>KS</option>
+                                <option>KY</option>
+                                <option>LA</option>
+                                <option>ME</option>
+                                <option>MD</option>
+                                <option>MA</option>
+                                <option>MI</option>
+                                <option>MN</option>
+                                <option>MS</option>
+                                <option>MO</option>
+                                <option>MT</option>
+                                <option>NE</option>
+                                <option>NV</option>
+                                <option>NH</option>
+                                <option>NJ</option>
+                                <option>NM</option>
+                                <option>NY</option>
+                                <option>NC</option>
+                                <option>ND</option>
+                                <option>OH</option>
+                                <option>OK</option>
+                                <option>OR</option>
+                                <option>PA</option>
+                                <option>RI</option>
+                                <option>SC</option>
+                                <option>SD</option>
+                                <option>TN</option>
+                                <option>TX</option>
+                                <option>UT</option>
+                                <option>VT</option>
+                                <option>VA</option>
+                                <option>WA</option>
+                                <option>WV</option>
+                                <option>WI</option>
+                                <option>WY</option>
+                            </select>
+                            <button class="button is-success" id="searchBtn"><a href= "#list-section"></a>Search</button>
+
                         </div>
                         <span class="icon is-medium is-left">
-                          <i class="fas fa-globe"></i>
+                            <i class="fas fa-globe"></i>
                         </span>
-                      </div>
+                    </div>
                     <div class="control">
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
+
+    
     <!-- for the list of parks -->
-    <section class="section is-medium" id="test">
+    <section class="section is-medium">
+        <h3 id="list-section">National Park List</h3>
         <ul id="parks-list">
         </ul>
-      </section>
+    </section>
 
+    <!-- modals for the list of national parks -->
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Modal title</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <!-- Content ... -->
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">Save changes</button>
+                <button class="button">Cancel</button>
+            </footer>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/script.js"></script>
 </body>
