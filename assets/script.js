@@ -4,10 +4,17 @@ function getState() {
     .then(function(response) {
         return response.json();
     })
-    .then(function(data) {
-        console.log(data);
-    })
+    .then(function(parks) {
+        console.log(parks);
+        console.log(parks.data[0].name);
+        $('#parks-list').empty();
+        for(var i = 0; i < parks.data.length; i++) {
+            $('#parks-list').append('<li>' + '<a class="parkBtn">' + parks.data[i].fullName + '</a>' + '</li>')
+    }
+})
 };
+
+
 
 $('#searchBtn').on('click', function(e) {
     e.preventDefault();
