@@ -20,70 +20,68 @@
             </h1>
             <h2 class="subtitle">Find Your States National Parks</h2>
         </div>
-    </section>
-
-    <section class="hero is-success is-halfheight">
-        <div class="hero-body">
-            <div class="">
-                <div class="field has-addons">
-                    <div class="control has-icons-left">
-                        <div class="select is-medium">
-                            <select id="state-code">
-                                <option class="input" id="state" type="text" selected>State</option>
-                                <option>AL</option>
-                                <option>AK</option>
-                                <option>AS</option>
-                                <option>AZ</option>
-                                <option>AR</option>
-                                <option>CA</option>
-                                <option>CO</option>
-                                <option>CT</option>
-                                <option>DE</option>
-                                <option>FL</option>
-                                <option>GA</option>
-                                <option>HI</option>
-                                <option>ID</option>
-                                <option>IL</option>
-                                <option>IN</option>
-                                <option>IA</option>
-                                <option>KS</option>
-                                <option>KY</option>
-                                <option>LA</option>
-                                <option>ME</option>
-                                <option>MD</option>
-                                <option>MA</option>
-                                <option>MI</option>
-                                <option>MN</option>
-                                <option>MS</option>
-                                <option>MO</option>
-                                <option>MT</option>
-                                <option>NE</option>
-                                <option>NV</option>
-                                <option>NH</option>
-                                <option>NJ</option>
-                                <option>NM</option>
-                                <option>NY</option>
-                                <option>NC</option>
-                                <option>ND</option>
-                                <option>OH</option>
-                                <option>OK</option>
-                                <option>OR</option>
-                                <option>PA</option>
-                                <option>RI</option>
-                                <option>SC</option>
-                                <option>SD</option>
-                                <option>TN</option>
-                                <option>TX</option>
-                                <option>UT</option>
-                                <option>VT</option>
-                                <option>VA</option>
-                                <option>WA</option>
-                                <option>WV</option>
-                                <option>WI</option>
-                                <option>WY</option>
-                            </select>
-                            <button class="button is-success" id="searchBtn"><a href= "#list-section"></a>Search</button>
-
+  </section>
+  <section class="hero is-success is-halfheight">
+    <div class="hero-body">
+      <div class="">
+        <div class="field has-addons">
+          <div class="control has-icons-left">
+            <div class="select is-medium">
+              <select id="state-code">
+                <option class="input" id="state" type="text" selected>State</option>
+                <option>AL</option>
+                <option>AK</option>
+                <option>AS</option>
+                <option>AZ</option>
+                <option>AR</option>
+                <option>CA</option>
+                <option>CO</option>
+                <option>CT</option>
+                <option>DE</option>
+                <option>FL</option>
+                <option>GA</option>
+                <option>HI</option>
+                <option>ID</option>
+                <option>IL</option>
+                <option>IN</option>
+                <option>IA</option>
+                <option>KS</option>
+                <option>KY</option>
+                <option>LA</option>
+                <option>ME</option>
+                <option>MD</option>
+                <option>MA</option>
+                <option>MI</option>
+                <option>MN</option>
+                <option>MS</option>
+                <option>MO</option>
+                <option>MT</option>
+                <option>NE</option>
+                <option>NV</option>
+                <option>NH</option>
+                <option>NJ</option>
+                <option>NM</option>
+                <option>NY</option>
+                <option>NC</option>
+                <option>ND</option>
+                <option>OH</option>
+                <option>OK</option>
+                <option>OR</option>
+                <option>PA</option>
+                <option>RI</option>
+                <option>SC</option>
+                <option>SD</option>
+                <option>TN</option>
+                <option>TX</option>
+                <option>UT</option>
+                <option>VT</option>
+                <option>VA</option>
+                <option>WA</option>
+                <option>WV</option>
+                <option>WI</option>
+                <option>WY</option>
+              </select>
+              <a class="director" href="#test">Take me to the parks</a>
                         </div>
                         <span class="icon is-medium is-left">
                             <i class="fas fa-globe"></i>
@@ -94,15 +92,42 @@
                 </div>
             </div>
     </section>
-
-    
     <!-- for the list of parks -->
     <section class="section is-medium">
         <h3 id="list-section">National Park List</h3>
         <ul id="parks-list">
         </ul>
+      </article>
+    </div>
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-12">
+        <div class="tile">
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-info" id="middle">
+              <p class="title">Middle tile</p>
+              <p class="subtitle">With an image</p>
+              <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/640x480.png">
+              </figure>
+            </article>
+            <article class="tile is-child notification is-warning" id="yellow">
+              <p class="title">...tiles</p>
+              <p class="subtitle">Bottom tile</p>
+            </article>
+          </div>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-danger" id="red">
+            <p class="title">Wide tile</p>
+            <p class="subtitle">Aligned with the right tile</p>
+            <p></p>
+            <div class="content">
+              <!-- Content -->
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
-
     <!-- modals for the list of national parks -->
     <div class="modal">
         <div class="modal-background"></div>
@@ -120,9 +145,8 @@
             </footer>
         </div>
     </div>
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/script.js"></script>
-
 </body>
-
 </html>
