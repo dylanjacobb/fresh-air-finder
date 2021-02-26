@@ -10,21 +10,39 @@ function getState() {
         var parksData = parks.data;
         li(parksData);
         console.log(parks.data[0].description)
+        tile(parksData)
     }
-
 )
 };
 
 function li(parksData) {
 $('#parks-list').empty();
 for(var i = 0; i < parksData.length; i++) {
-    $('#parks-list').append('<li>' + '<a class="parkBtn">' + parksData[i].fullName + '</a>' + '</li>')
+    $('#parks-list').append('<li>' + '<a class="parkBtn" id="parkButton' + [i] + '">' + parksData[i].fullName + '</a>' + '</li>')
+}
+}
+// Fill tiles with park info
+function tile(parksData) {
+    for(var i = 0; i < parksData.length; i++) {
+        $('img').attr('src', parksData[i].images[0].url)
     }
 }
+
+
+$(".parkBtn").on("click", function () {
+    $(this).attr("id").split("parkButton")[1]
+    console.log(this);
+    tile(parksData)
+});
 
 
 $('select').change(function(e) {
     e.preventDefault();
     getState();
 })
- 
+
+
+// var userInput = $("#" + clickedHour).val().trim()
+// if (userInput) {
+    // localStorage.setItem("hour" + clickedHour, userInput)
+// }
