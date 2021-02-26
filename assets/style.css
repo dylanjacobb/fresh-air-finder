@@ -50,12 +50,20 @@ body {
     background-size: cover;
 }
 
+#state-code {
+    border-radius: 6px;
+}
+
+.director {
+    color:rgb(255, 238, 183);
+    font-family: 'Courgette', cursive;
+}
+
 #parks-list {
     background-color: rgb(28, 56, 47);
     width: 30%;
     border-radius: 10px;
 }
-
 
 .parkBtn {
     color: rgb(225, 200, 169);
