@@ -13,11 +13,22 @@ body {
     background-color: rgb(28, 56, 47);
 }
 
+/* for the Fresh Air Finder h1 */
 .title {
     text-align: center;
     font-family: 'Courgette', cursive;
     color:rgb(255, 238, 183);
     font-size: 55px;
+    text-shadow: 2px 2px 8px #aaaaaa;
+    
+}
+
+.subtitle {
+    text-align: center;
+    color:rgb(255, 238, 183);
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 /* centers the heroes including the search bars */
@@ -34,12 +45,17 @@ body {
 .is-halfheight {
     background-image: url('https://images.unsplash.com/photo-1511497584788-876760111969?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80');
     width: 100%;
-    margin-top: 100px;
+    height: 1000px;
+    min-height: 800px;
+    background-size: cover;
 }
 
 #parks-list {
- background-color: rgb(28, 56, 47);
+    background-color: rgb(28, 56, 47);
+    width: 30%;
+    border-radius: 10px;
 }
+
 
 .parkBtn {
     color: rgb(225, 200, 169);
