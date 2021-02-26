@@ -7,16 +7,23 @@ function getState() {
     .then(function(parks) {
         console.log(parks);
         console.log(parks.data[0].name);
-        $('#parks-list').empty();
-        for(var i = 0; i < parks.data.length; i++) {
-            $('#parks-list').append('<li>' + '<a class="parkBtn">' + parks.data[i].fullName + '</a>' + '</li>')
+        var parksData = parks.data;
+        li(parksData);
     }
-})
+
+)
 };
 
+function li(parksData) {
+$('#parks-list').empty();
+for(var i = 0; i < parksData.length; i++) {
+    $('#parks-list').append('<li>' + '<a class="parkBtn">' + parksData[i].fullName + '</a>' + '</li>')
+    }
+}
 
 
 $('#searchBtn').on('click', function(e) {
     e.preventDefault();
     getState();
 })
+ 
