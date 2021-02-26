@@ -9,6 +9,7 @@ function getState() {
         console.log(parks.data[0].name);
         var parksData = parks.data;
         li(parksData);
+        console.log(parks.data[0].description)
     }
 
 )
