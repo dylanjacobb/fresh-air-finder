@@ -35,7 +35,7 @@ function li(parksData) {
 $('#parks-list').empty();
 $('#parks-list').unbind();
 for(var i = 0; i < parksData.length; i++) {
-    $('#parks-list').append('<li ><button type="button" class="parkBtn" id="parkButton' + [i] + '">' + parksData[i].fullName + '</button>' + '</li>')
+    $('#parks-list').append('<li ><button type="button" class="parkBtn is-8" id="parkButton' + [i] + '">' + parksData[i].fullName + '</button>' + '</li>')
 }
 }
 
