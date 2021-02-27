@@ -10,7 +10,7 @@ function getState() {
         var parksData = parks.data;
         li(parksData);
         console.log(parks.data[0].description)
-        tile(parksData)
+        // tile(parksData)
     }
 )
 };
@@ -18,25 +18,40 @@ function getState() {
 function li(parksData) {
 $('#parks-list').empty();
 for(var i = 0; i < parksData.length; i++) {
-    $('#parks-list').append('<li>' + '<a class="parkBtn" id="parkButton' + [i] + '">' + parksData[i].fullName + '</a>' + '</li>')
+    $('#parks-list').append('<li ><button type="button" class="parkBtn" id="parkButton' + [i] + '">' + parksData[i].fullName + '</button>' + '</li>')
 }
 }
 // Fill tiles with park info
-function tile(parksData) {
-    for(var i = 0; i < parksData.length; i++) {
-        $('img').attr('src', parksData[i].images[0].url)
-    }
-}
+// function tile(parksData) {
+    //     for(var i = 0; i < parksData.length; i++) {
+        //         $('img').attr('src', parksData[i].images[0].url)
+        //     }
+        // }
+        
+        
+        $("#parks-list").on("click", function(e){
+            e.preventDefault();
+            var idClicked = e.target.id;
+            console.log(idClicked);
+            var num = idClicked.split("parkButton")[1];
+            console.log(num);
+        });
+        
+        // $(".parkBtn").click(function(event) {
+        //     event.preventDefault();
+            
 
-
-$(".parkBtn").on("click", function () {
-    $(this).attr("id").split("parkButton")[1]
-    console.log(this);
-    tile(parksData)
-});
-
-
-$('select').change(function(e) {
+            // var btnClicked = $(this);
+            // console.log(btnClicked.id);
+            
+            // console.log($(this));
+            // $(this).attr("id").split("parkButton")[1]
+        
+            // tile(parksData)
+        // });
+        
+        
+        $('select').change(function(e) {
     e.preventDefault();
     getState();
 })
