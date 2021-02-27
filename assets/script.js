@@ -23,11 +23,22 @@ function getState() {
             $('#address').text('Address: ' + JSON.stringify(parks.data[num].addresses[0].line1 + ', ' + parks.data[num].addresses[0].city + ', ' + parks.data[num].addresses[0].stateCode + ' ' + parks.data[num].addresses[0].postalCode));
             $('#phoneNumber').text('Phone Number: ' + parks.data[0].contacts.phoneNumbers[0].phoneNumber);
             $('#webSite').attr('href', parks.data[0].url).text('Go To The Website');
+            var cityName = parks.data[num].addresses[0].city;
+            getWeather(cityName);
         });
-        
     }
 )
 };
+
+function getWeather(cityName) {
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=89104d923bea4d5ae43cfd42a60778d4&units=imperial')
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        console.log(data);
+    })
+}
 
 
 
@@ -39,37 +50,7 @@ for(var i = 0; i < parksData.length; i++) {
 }
 }
 
-// var num = [];
-// Fill tiles with park info
-// function tile(parksData) {
-//             $('img').attr('src', parksData[num].images[0].url)
-            
-//         }
-        
-        
-        // $("#parks-list").on("click", function(e){
-        //     e.preventDefault();
-        //     var idClicked = e.target.id;
-        //     console.log(idClicked);
-        //     num = idClicked.split("parkButton")[1];
-        //     console.log(num);
-        //     $('img').attr('src', parksData[num].images[0].url)
-        // });
-        
-        // $(".parkBtn").click(function(event) {
-        //     event.preventDefault();
-            
-
-            // var btnClicked = $(this);
-            // console.log(btnClicked.id);
-            
-            // console.log($(this));
-            // $(this).attr("id").split("parkButton")[1]
-        
-            // tile(parksData)
-        // });
-        
-        
+ 
     $('select').change(function(e) {
     e.preventDefault();
     getState();
