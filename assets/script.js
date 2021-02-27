@@ -11,6 +11,21 @@ function getState() {
         li(parksData);
         console.log(parks.data[0].description)
         // tile(parksData)
+        $("#parks-list").on("click", function(e){
+            e.preventDefault();
+            var idClicked = e.target.id;
+            console.log(idClicked);
+            num = idClicked.split("parkButton")[1];
+            console.log(num);
+
+            $('img').attr('src', parksData[num].images[0].url)
+            $('.parkTitle').text(parksData[num].fullName)
+            $('.parkDescription').text(parksData[num].description)
+            $('#address').text(JSON.stringify(parks.data[num].addresses[0].line1 + ", " + parks.data[num].addresses[0].city + ", " + parks.data[num].addresses[0].stateCode + " " + parks.data[num].addresses[0].postalCode))
+            $('#phoneNumber').text(parks.data[0].contacts.phoneNumbers[0].phoneNumber)
+            $('#webSite').text(parks.data[0].url)
+        });
+        
     }
 )
 };
@@ -21,21 +36,23 @@ for(var i = 0; i < parksData.length; i++) {
     $('#parks-list').append('<li ><button type="button" class="parkBtn" id="parkButton' + [i] + '">' + parksData[i].fullName + '</button>' + '</li>')
 }
 }
+
+// var num = [];
 // Fill tiles with park info
 // function tile(parksData) {
-    //     for(var i = 0; i < parksData.length; i++) {
-        //         $('img').attr('src', parksData[i].images[0].url)
-        //     }
-        // }
+//             $('img').attr('src', parksData[num].images[0].url)
+            
+//         }
         
         
-        $("#parks-list").on("click", function(e){
-            e.preventDefault();
-            var idClicked = e.target.id;
-            console.log(idClicked);
-            var num = idClicked.split("parkButton")[1];
-            console.log(num);
-        });
+        // $("#parks-list").on("click", function(e){
+        //     e.preventDefault();
+        //     var idClicked = e.target.id;
+        //     console.log(idClicked);
+        //     num = idClicked.split("parkButton")[1];
+        //     console.log(num);
+        //     $('img').attr('src', parksData[num].images[0].url)
+        // });
         
         // $(".parkBtn").click(function(event) {
         //     event.preventDefault();
