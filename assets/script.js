@@ -21,7 +21,7 @@ function getState() {
             }
         }
         )
-};
+}; 
 
 function getWeather(cityName) {
     fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=89104d923bea4d5ae43cfd42a60778d4&units=imperial')
@@ -39,26 +39,23 @@ function createList(parksData) {
         var park = parksData[i];
         var li = $('<li>');
         var button = $('<button type="button" class="parkBtn is-8">' + park.fullName + '</button>');
-        var cityName = park.addresses[0].postalCode;
         button.data('image', park.images[0].url);
         button.data('title', park.fullName);
         button.data('description', park.description);
         button.data('phone', 'Phone Number: ' + park.contacts.phoneNumbers[0].phoneNumber);
         button.data('link', park.url);
-        button.data('city', park.addresses[0].city);
-        // button.data('postal', park.addresses[0].postalCode);
+        button.data('city', park.addresses[0].postalCode);
         button.data('address', 'Address: ' + JSON.stringify(park.addresses[0].line1 + ', ' + park.addresses[0].city + ', ' + park.addresses[0].stateCode + ' ' + park.addresses[0].postalCode));
         li.append(button);
         items.append(li);
     }
-    getWeather(cityName);
     $('#parks-list').html(items);  
     
 }
 
 if (loadHistory !== null) {
     for (var j = 0; j < loadHistory.length; j++) {
-        var historyButtons = $('<li>' + '</li>')
+        var historyButtons = $('<li>' + '</li>');
         historyButtons.text(loadHistory[j].toUpperCase());
         $('#history').append(historyButtons);
     }
