@@ -3,6 +3,7 @@ var loadHistory = JSON.parse(localStorage.getItem('state')) || [];
 function getState() {
     var states = $('#state-code');
     fetch('https://developer.nps.gov/api/v1/parks?stateCode=' + states.val() + '&api_key=qQvruAIuR9oGS2ih7yXB2P0YKf17frx4oM1QnVuC')
+<<<<<<< HEAD
         .then(function (response) {
             return response.json();
         })
@@ -21,6 +22,36 @@ function getState() {
             }
         }
         )
+=======
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(parks) {
+        console.log(parks);
+        console.log(parks.data[0].name);
+        var parksData = parks.data;
+        li(parksData);
+        console.log(parks.data[0].description)
+        // tile(parksData)
+        $(".parkBtn").on("click", function(e){
+            e.preventDefault();
+            $('.modal').addClass('is-active')
+            var idClicked = e.target.id;
+            console.log(idClicked);
+            num = idClicked.split("parkButton")[1];
+            console.log(num);
+            $('img').attr('src', parksData[num].images[0].url)
+            $('.parkTitle').text(parksData[num].fullName)
+            $('.parkDescription').text(parksData[num].description)
+            $('#address').text('Address: ' + JSON.stringify(parks.data[num].addresses[0].line1 + ', ' + parks.data[num].addresses[0].city + ', ' + parks.data[num].addresses[0].stateCode + ' ' + parks.data[num].addresses[0].postalCode));
+            $('#phoneNumber').text('Phone Number: ' + parks.data[0].contacts.phoneNumbers[0].phoneNumber);
+            $('#webSite').attr('href', parks.data[0].url).text('Go To The Website');
+            var cityName = parks.data[num].addresses[0].city;
+            getWeather(cityName);
+        });
+    }
+)
+>>>>>>> main
 };
 
 function getWeather(cityName) {
@@ -64,6 +95,7 @@ if (loadHistory !== null) {
     }
 }
 
+<<<<<<< HEAD
 $("#parks-list").on("click", '.parkBtn', function () {
     $('.modal').addClass('is-active')
     $('img').attr('src', $(this).data('image'));
@@ -77,6 +109,10 @@ $("#parks-list").on("click", '.parkBtn', function () {
 
 
 $('select').change(function (e) {
+=======
+ 
+$('select').change(function(e) {
+>>>>>>> main
     e.preventDefault();
     getState();
 })
@@ -84,3 +120,11 @@ $('select').change(function (e) {
 $('#closeModal').on('click', function() {
     $('.modal').removeClass("is-active");
 })
+<<<<<<< HEAD
+=======
+
+// var userInput = $("#" + clickedHour).val().trim()
+// if (userInput) {
+    // localStorage.setItem("hour" + clickedHour, userInput)
+// }
+>>>>>>> main
