@@ -2,26 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/style.css">
-    <title>Fresh Air Finder</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>Fresh Air Finder</title>
 </head>
 
 <body>
-    <section class="hero header">
-        <div class="hero-body">
-            <h1 class="title">
-                Fresh Air Finder
-            </h1>
-            <h2 class="subtitle">Find Your States National Parks</h2>
-        </div>
-  </section>
+
   <section class="hero is-success is-halfheight">
+    <h1 class="title">
+      Fresh Air Finder
+    </h1>
+    <h2 class="subtitle">Find Your States National Parks</h2>
     <div class="hero-body">
       <div class="">
         <div class="field has-addons">
@@ -82,47 +79,44 @@
                 <option>WY</option>
               </select>
               <a class="director" href="#test">Take me to the parks</a>
-                        </div>
-                        <span class="icon is-medium is-left">
-                            <i class="fas fa-globe"></i>
-                        </span>
-                    </div>
-                    <div class="control">
-                    </div>
-                </div>
             </div>
-          </section>
-          <!-- for the list of parks -->
-          <section class="tile is-vertical sectionCenter is-10" id="test"> 
-            <h3 id="list-section">National Park List</h3>
-            <div id="parks-list">
-            <ul>
-            </ul>
-            </div>
-            <ul id="history" class="history">
-            </ul>
+            <span class="icon is-medium is-left">
+              <i class="fas fa-globe"></i>
+            </span>
+          </div>
+          <div class="control">
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- for the list of parks -->
+  <section class="tile is-vertical sectionCenter is-12" id="test">
+    <h3 id="list-section">National Park List</h3>
+    <div id="parks-list">
+      <ul>
+      </ul>
+    </div>
+    <ul id="history" class="history">
+    </ul>
 
 
     <div class="tile is-ancestor">
       <div class="tile is-vertical">
         <div class="tile">
           <div class="tile is-parent">
-            <article class="tile is-child notification is-info" id="middle">
-              <!-- <p class="title">Middle tile</p> -->
+            <article class="tile is-child notification is-info middle-tile" id="middle">
               <p class="parkTitle">...tiles</p>
               <figure id="middle-image">
-                <img width="600" height="500" src="https://bulma.io/images/placeholders/640x480.png">
+                <img width="700" height="600" src="https://bulma.io/images/placeholders/640x480.png">
               </figure>
               <p class="parkDescription">Bottom tile</p>
             </article>
-            <!-- <article class="tile is-child notification is-warning" id="yellow">
-            </article> -->
           </div>
         </div>
 
 
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-danger" id="contactInfo">
+        <div class="tile is-parent bottom-tile">
+          <article class="tile is-child notification is-danger contact-info" id="contactInfo">
             <p class="" id="address">Wide tile</p>
             <p class="" id="phoneNumber">Aligned with the right tile</p>
             <a href="" class="" id="webSite"></a>
@@ -132,35 +126,49 @@
           </article>
         </div>
       </div>
-    </section>
-    <!-- modals for the list of national parks -->
-    <div class="modal">
-      <div class="modal-background"></div>
-      <div class="modal-card">
-          <header class="modal-card-head">
-              <p class="modal-card-title">Modal title</p>
-              <button class="delete" aria-label="close" id="closeModal"></button>
-          </header>
-          <section class="modal-card-body">
-                <div class="card card-content content" id="weather1">
-                  Weather Content here
-                </div>
-                <div class="card card-content content" id="weather2">
-                  Weather Content here
-                </div>
-                <div class="card card-content content" id="weather3">
-                  Weather Content here
-                </div>
-                <div class="card card-content content" id="weather4">
-                  Weather Content here
-                </div>
-                <div class="card card-content content" id="weather5">
-                  Weather Content here
-                </div>
-      </div>
+  </section>
+  <!-- modals for the list of national parks -->
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Modal title</p>
+        <button class="delete" aria-label="close" id="closeModal"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="card card-content content" id="weather1">
+          Weather Content here
+        </div>
+        <div class="card card-content content" id="weather2">
+          Weather Content here
+        </div>
+        <div class="card card-content content" id="weather3">
+          Weather Content here
+        </div>
+        <div class="card card-content content" id="weather4">
+          Weather Content here
+        </div>
+        <div class="card card-content content" id="weather5">
+          Weather Content here
+        </div>
+    </div>
   </div>
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/script.js"></script>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Fresh Air Finder</strong> by <a href="https://github.com/erenozgur98">Eren Ozgur</a> , <a
+          href="https://github.com/HurleySquared">Eric Hurley</a>, <a href="https://github.com/ihm57511">Ian
+          McBrayer</a>, <a href="https://github.com/dylanjacobb">Dylan Jacob</a> . Visit the <a
+          href="https://www.npca.org/">National Park Conservation Association</a> to aid in the preservation of our
+        National Parks.
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/script.js"></script>
 </body>
+
 </html>
