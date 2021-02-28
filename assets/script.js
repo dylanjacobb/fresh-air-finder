@@ -13,6 +13,7 @@ function getState() {
         // tile(parksData)
         $(".parkBtn").on("click", function(e){
             e.preventDefault();
+            $('.modal').addClass('is-active')
             var idClicked = e.target.id;
             console.log(idClicked);
             num = idClicked.split("parkButton")[1];
@@ -51,11 +52,14 @@ for(var i = 0; i < parksData.length; i++) {
 }
 
  
-    $('select').change(function(e) {
+$('select').change(function(e) {
     e.preventDefault();
     getState();
 })
 
+$('#closeModal').on('click', function() {
+    $('.modal').removeClass("is-active");
+})
 
 // var userInput = $("#" + clickedHour).val().trim()
 // if (userInput) {
