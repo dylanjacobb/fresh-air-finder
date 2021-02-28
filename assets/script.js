@@ -38,7 +38,8 @@ function createList(parksData) {
     for (var i = 0; i < parksData.length; i++) {
         var park = parksData[i];
         var li = $('<li>');
-        var button = $('<button type="button" class="parkBtn is-8">' + park.fullName + '</button>');
+        var button = $('<button type="button" class="parkBtn is-8">' + park.fullName + '</button>'
+            + "     " + '<button type="button" class="weatherBtn">Get Weather</button>');
         button.data('image', park.images[0].url);
         button.data('title', park.fullName);
         button.data('description', park.description);
@@ -62,14 +63,13 @@ if (loadHistory !== null) {
 }
 
 $("#parks-list").on("click", '.parkBtn', function () {
-    $('.modal').addClass('is-active')
     $('img').attr('src', $(this).data('image'));
     $('.parkTitle').text($(this).data('title'));
     $('.parkDescription').text($(this).data('description'));
     $('#address').text($(this).data('address'));
     $('#phoneNumber').text($(this).data('phone'));
     $('#webSite').attr('href', $(this).data('link')).text('Go To The Website');
-    getWeather($(this).data('city'));
+    // getWeather($(this).data('city'));
 })
 
 
@@ -78,6 +78,13 @@ $('select').change(function (e) {
     getState();
 })
 
+$('#parks-list').on('click', '.weatherBtn', function() {
+    $('.modal').addClass("is-active");
+    getWeather($(this).data('city'));
+    console.log("clicked")
+})
+
 $('#closeModal').on('click', function() {
     $('.modal').removeClass("is-active");
 })
+
