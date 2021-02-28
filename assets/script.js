@@ -21,17 +21,37 @@ function getState() {
             }
         }
         )
-}; 
+};
 
 function getWeather(cityName) {
     fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=89104d923bea4d5ae43cfd42a60778d4&units=imperial')
         .then(function (response) {
             return response.json();
         })
-        .then(function (data) {
-            console.log(data);
+        .then(function (weather) {
+            console.log(weather);
+            weather.list.forEach(function (weatherObject) {
+                if (moment.unix(weatherObject.dt).format("H") === "13") {
+                    console.log(weatherObject.main.temp);
+                    createCard(weatherObject);
+                }
+
+            })
         })
+};
+
+function createCard(weatherObject) { 
+        var day = $('<h2>').text(moment.unix(weatherObject.dt).format("ddd-MMM Do"));
+        var temp = $('<h3>').text(weatherObject.main.temp);
+        var wind = $('<h3>').text(weatherObject.wind.speed);
+        var humid = $('<h3>').text(weatherObject.main.humidity);
+        var card = $('<div>').addClass('card card-content content');
+        var cardBody = $('<div>');
+        $('.modal-card').append(card.append(day, temp, wind, humid));
+
+    
 }
+
 
 function createList(parksData) {
     var items = $('<ul id="parks-list-items">');
@@ -50,8 +70,8 @@ function createList(parksData) {
         li.append(button);
         items.append(li);
     }
-    $('#parks-list').html(items);  
-    
+    $('#parks-list').html(items);
+
 }
 
 if (loadHistory !== null) {
@@ -78,13 +98,13 @@ $('select').change(function (e) {
     getState();
 })
 
-$('#parks-list').on('click', '.weatherBtn', function() {
+$('#parks-list').on('click', '.weatherBtn', function () {
     $('.modal').addClass("is-active");
     getWeather($(this).data('city'));
     console.log("clicked")
 })
 
-$('#closeModal').on('click', function() {
+$('#closeModal').on('click', function () {
     $('.modal').removeClass("is-active");
 })
 
