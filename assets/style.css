@@ -171,7 +171,7 @@ li {
 .weatherBtn {
     background-color: #3273dc;
     color: white;
-    font-size: 14px;
+    font-size: 20px;
     cursor: pointer;
     padding: 10px;
     border-top-right-radius: 20px;
@@ -197,12 +197,11 @@ li {
     background: white;
     border: none;
     font-size: 20px;
-    padding: 5px;
+    padding: 10px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     color: black;
     cursor: pointer;
-    padding-left: 10px;
 }
 
 #state-code {
