@@ -78,7 +78,7 @@
                 <option>WI</option>
                 <option>WY</option>
               </select>
-              <a class="director" href="#test">Take me to the parks</a>
+              <h2><a class="director" href="#test">Take me to the parks</a></h2>
               <h2 class="recentSearches"> Recent Searches</h2>
               <div id="history" class="history"></div>
             </div>
@@ -94,39 +94,40 @@
   <!-- for the list of parks -->
   <section class="tile is-vertical sectionCenter is-12" id="test">
     <div id="parks-list">
-      <h3 id="list-section">National Park List</h3>
+      <h3 id="list-section"></h3>
       <ul>
       </ul>
     </div>
     <ul id="history" class="history">
     </ul>
 
-
-    <div class="tile is-ancestor">
+    <!-- for the main tile -->
+    <div class="tile is-ancestor park-name">
       <div class="tile is-vertical">
         <div class="tile">
           <div class="tile is-parent">
             <article class="tile is-child notification is-info middle-tile" id="middle">
-              <p class="parkTitle">...tiles</p>
+              <p class="parkTitle"></p>
               <figure id="middle-image">
-                <img width="700" height="600" src="https://bulma.io/images/placeholders/640x480.png">
+                <img width="700" height="600" src="https://images.unsplash.com/photo-1484255801137-e15347403a20?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80">
               </figure>
-              <p class="parkDescription">Bottom tile</p>
+              <p class="parkDescription"></p>
+              <!-- for the address and phone number tile -->
+              <div class="tile is-parent bottom-tile">
+                <article class="tile is-child contact-info" id="contactInfo">
+                  <p class="" id="address"></p>
+                  <p class="" id="phoneNumber"></p>
+                  <a href="" class="" id="webSite"></a>
+                  <div class="content">
+                    <!-- Content -->
+                  </div>
+                </article>
+              </div>
             </article>
           </div>
         </div>
 
 
-        <div class="tile is-parent bottom-tile">
-          <article class="tile is-child notification contact-info" id="contactInfo">
-            <p class="" id="address">Wide tile</p>
-            <p class="" id="phoneNumber">Aligned with the right tile</p>
-            <a href="" class="" id="webSite"></a>
-            <div class="content">
-              <!-- Content -->
-            </div>
-          </article>
-        </div>
       </div>
   </section>
   <!-- modals for the list of national parks -->
@@ -134,7 +135,7 @@
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">Modal title</p>
+        <p class="modal-card-title">5 Day Weather Forcast</p>
         <button class="delete" aria-label="close" id="closeModal"></button>
       </header>
       <section class="modal-card-body" id="modal-body"> 
@@ -160,7 +161,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Fresh Air Finder</strong> by <a href="https://github.com/erenozgur98" target="blank">Eren Ozgur</a> , <a
+        <strong class="strong-title">Fresh Air Finder</strong> by <a href="https://github.com/erenozgur98" target="blank">Eren Ozgur</a> , <a
           href="https://github.com/HurleySquared" target="blank">Eric Hurley</a>, <a href="https://github.com/ihm57511" target="blank">Ian
           McBrayer</a>, <a href="https://github.com/dylanjacobb" target="blank">Dylan Jacob</a> . Visit the <a
           href="https://www.npca.org/" target="blank">National Park Conservation Association</a> to aid in the preservation of our

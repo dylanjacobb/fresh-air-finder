@@ -86,26 +86,23 @@ body {
     background-size: cover;
     background-position: center;
     padding: 100px;
+    background-color: rgb(28,57,70);
 }
 
-.has-background {
-    background-color: red;
-    
+#middle-image {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-#state-code {
-    border-radius: 6px;
-}
-
-.director {
-    color:rgb(255, 238, 183);
-    font-family: 'Courgette', cursive;
+.bottom-tile {
+    margin-top: 20px;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
 }
+
 #parks-list {
     width: 100%;
     border-radius: 10px;
@@ -131,9 +128,13 @@ li {
 
 .footer {
     margin-top: 50px;
-    background-color: rgb(19, 48, 57);
+    background-color: rgb(28,57,70);
     color: white;
     padding: 50px;
+}
+
+.strong-title {
+    color: white;
 }
 
 #state {
@@ -153,28 +154,36 @@ li {
     color: white;
     font-size: 14px;
     cursor: pointer;
-    padding-left: 20px;
-    padding: 12px;
-    border-radius: 20px;
+    padding: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: 0.5s;
+    border-style: none;
 }
+
+.weatherBtn:hover {      background-color: #265488;      color: white; }
 
 .parkBtn {
-    background: transparent;
+    background: white;
     border: none;
-    font-size: 24px;
-    color: white;
+    font-size: 20px;
+    padding: 5px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: black;
     cursor: pointer;
-    padding-right: 24px;
-}
-
-#parks-list > ul {
-    display: flex;
-    flex-direction: column;
+    padding-left: 10px;
 }
 
 #state-code {
     border: 1px solid black;
     cursor: pointer;
     transition: 0.8s;
+    border-radius: 6px;
 }
 #state-code:hover {      background-color: #c45f37;      color: white; }
+
+.modal-card-head, .modal-card-title{
+    background-color: rgb(23, 44, 71);
+    color: white;
+}
