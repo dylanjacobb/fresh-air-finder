@@ -47,7 +47,7 @@ function createCard(weatherObject) {
         var temp = $('<h6>').text("Temp: " + weatherObject.main.temp + "F");
         var wind = $('<h6>').text("Wind: " + weatherObject.wind.speed + "mph");
         var humid = $('<h6>').text("Humidity: " + weatherObject.main.humidity + "%");
-        var icon = "<img src=http://openweathermap.org/img/w/" + weatherObject.weather[0].icon + ".png' />"
+        var icon = "<img src=http://openweathermap.org/img/w/" + weatherObject.weather[0].icon + ".png />"
         var card = $('<div>').addClass('card card-content content');
         var cardBody = $('<div>');
         $('.modal-card-body').append(card.append(day, temp, wind, humid, icon));
