@@ -30,6 +30,7 @@ function getWeather(cityName) {
         })
         .then(function (weather) {
             console.log(weather);
+            $('.modal-card-body').empty();
             weather.list.forEach(function (weatherObject) {
                 if (moment.unix(weatherObject.dt).format("H") === "13") {
                     console.log(weatherObject.main.temp);
@@ -40,15 +41,16 @@ function getWeather(cityName) {
         })
 };
 
-function createCard(weatherObject) { 
+function createCard(weatherObject) {
+        
         var day = $('<h2>').text(moment.unix(weatherObject.dt).format("ddd-MMM Do"));
         var temp = $('<h6>').text("Temp: " + weatherObject.main.temp + "F");
         var wind = $('<h6>').text("Wind: " + weatherObject.wind.speed + "mph");
         var humid = $('<h6>').text("Humidity: " + weatherObject.main.humidity + "%");
-        // var icon = 'http://openweathermap.org/img/wn/' + ' icon code ' + '@2x.png'
+        var icon = "<img src=http://openweathermap.org/img/w/" + weatherObject.weather[0].icon + ".png' />"
         var card = $('<div>').addClass('card card-content content');
         var cardBody = $('<div>');
-        $('.modal-card-body').append(card.append(day, temp, wind, humid));
+        $('.modal-card-body').append(card.append(day, temp, wind, humid, icon));
 
     
 }
