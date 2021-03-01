@@ -42,12 +42,13 @@ function getWeather(cityName) {
 
 function createCard(weatherObject) { 
         var day = $('<h2>').text(moment.unix(weatherObject.dt).format("ddd-MMM Do"));
-        var temp = $('<h3>').text(weatherObject.main.temp);
-        var wind = $('<h3>').text(weatherObject.wind.speed);
-        var humid = $('<h3>').text(weatherObject.main.humidity);
+        var temp = $('<h6>').text("Temp: " + weatherObject.main.temp + "F");
+        var wind = $('<h6>').text("Wind: " + weatherObject.wind.speed + "mph");
+        var humid = $('<h6>').text("Humidity: " + weatherObject.main.humidity + "%");
+        // var icon = 'http://openweathermap.org/img/wn/' + ' icon code ' + '@2x.png'
         var card = $('<div>').addClass('card card-content content');
         var cardBody = $('<div>');
-        $('.modal-card').append(card.append(day, temp, wind, humid));
+        $('.modal-card-body').append(card.append(day, temp, wind, humid));
 
     
 }
