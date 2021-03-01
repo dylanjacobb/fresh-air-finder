@@ -66,9 +66,16 @@ body {
     margin: 0 auto;
 }
 
+.divHistory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* style for the history buttons */
 .historyBtn {
     color: black;
+    margin: 4px;
 }
 
 /* style for recent searches */
@@ -77,6 +84,13 @@ body {
     border-bottom:rgb(19, 48, 57) solid;
     font-size: 24px;
     margin: 8px;
+}
+
+/* style for reset button */
+.reset {
+    font-size: 12px;
+    border-radius: 8px;
+    padding: 8px;
 }
 
 /* changes the background image */
@@ -129,10 +143,7 @@ li {
 
 /* hides the dropdown arrow */
 .select:not(.is-multiple):not(.is-loading)::after {
-    border-color: #3273dc;
-    right: 1.125em;
-    z-index: 4;
-    display: none;
+    border-color: #c45f37;
 }
 
 .footer {
@@ -170,7 +181,18 @@ li {
     border-style: none;
 }
 
-.weatherBtn:hover {      background-color: #265488;      color: white; }
+.weatherBtn:hover {
+    background-color: #265488;
+    color: white; 
+}
+
+.parkBtn:hover {
+    opacity: 0.8;   
+}
+
+.parkBtn:active {
+    box-shadow: 0 0 0 2px black inset;
+}
 
 .parkBtn {
     background: white;
@@ -186,13 +208,23 @@ li {
 
 #state-code {
     border: 1px solid black;
+    font-size: 16px;
     cursor: pointer;
-    transition: 0.8s;
     border-radius: 6px;
 }
-#state-code:hover {      background-color: #c45f37;      color: white; }
+#state-code:hover {
+    background-color: #c45f37;
+    color: white; 
+}
 
 .modal-card-head, .modal-card-title{
     background-color: rgb(23, 44, 71);
     color: white;
+}
+
+.center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
