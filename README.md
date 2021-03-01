@@ -3,6 +3,9 @@
 ## Description
 We first structured the website and styling with the CSS framework ***Bulma***.  Utilizing the National Park Service API and OpenWeather API we built an application that will display National Parks with a 5-Day Forecast to match for each park.  Upon selecting a state from the drop down, you will be shown a list of the parks coordinating with that state.  Next to the park, there is a button to display the weather in a modal.  Below said list will be an image from the park, a description of the park, and some contact info for that park with a link to the parks website. Each state you select will be saved to local storage and shown as a button that will take you to that list of parks for that state.
 
+## Link to presentation
+[Presentation](https://docs.google.com/presentation/d/1Cy2ssrhj3EU_6f9QX829LpBUOPr-uF0yqMa5GikA6rs/edit?usp=sharing)
+
 ## Acceptance Criteria
 ```
 Application uses at least two server-side APIs.
@@ -33,10 +36,10 @@ Application is interactive (accepts and responds to user input)
 - [Deployed Application](https://dylanjacobb.github.io/fresh-air-finder/)
 
 ## Screenshots of Application
-![Options]()
-![Parks]()
-![Descriptions]()
-![Weather Modal]()
+![Homepage](./images/homepage-faf.png)
+![Parks](./images/list-of-parks.png)
+![Descriptions](./images/park-description.png)
+![Weather Modal](./images/weather-modal.png)
 
 ## Team's GitHub Accounts
 - [Ian McBrayer](https://github.com/ihm57511)
