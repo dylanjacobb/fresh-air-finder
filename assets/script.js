@@ -42,17 +42,26 @@ function getWeather(cityName) {
 };
 
 function createCard(weatherObject) {
-        
-        var day = $('<h2>').text(moment.unix(weatherObject.dt).format("ddd-MMM Do"));
-        var temp = $('<h6>').text("Temp: " + weatherObject.main.temp + "F");
-        var wind = $('<h6>').text("Wind: " + weatherObject.wind.speed + "mph");
-        var humid = $('<h6>').text("Humidity: " + weatherObject.main.humidity + "%");
-        var icon = "<img src=http://openweathermap.org/img/w/" + weatherObject.weather[0].icon + ".png />"
-        var card = $('<div>').addClass('card card-content content');
-        var cardBody = $('<div>');
-        $('.modal-card-body').append(card.append(day, temp, wind, humid, icon));
 
-    
+    var day = $('<h2>').text(moment.unix(weatherObject.dt).format("ddd-MMM Do"));
+    var temp = $('<h6>').text("Temp: " + weatherObject.main.temp + "F");
+    var wind = $('<h6>').text("Wind: " + weatherObject.wind.speed + "mph");
+    var humid = $('<h6>').text("Humidity: " + weatherObject.main.humidity + "%");
+    var icon = "<img src=http://openweathermap.org/img/w/" + weatherObject.weather[0].icon + ".png />"
+    var cardBody = $('<div>').addClass('card card-content content wrap');
+    var messageBad = $('<h2>').text("Maybe Tomorrow").css("color", "red")
+    var messageEh = $('<h2>').text("Cloudy but Dry").css("color", "orange")
+    var messageGood = $('<h2>').text("Fresh Air!").css("color", "green")
+    if (weatherObject.weather[0].id === 800) {
+        cardBody.append(messageGood)
+    } else if (weatherObject.weather[0].id > 800) {
+        cardBody.append(messageEh) 
+    } else {
+        cardBody.append(messageBad)
+    }
+    $('.modal-card-body').append(cardBody.append(day, temp, wind, humid, icon));
+
+
 }
 
 
@@ -86,7 +95,7 @@ if (loadHistory !== null) {
     }
 }
 
-$('#history').on('click', '.historyBtn', function(e) {
+$('#history').on('click', '.historyBtn', function (e) {
     e.preventDefault();
 })
 
