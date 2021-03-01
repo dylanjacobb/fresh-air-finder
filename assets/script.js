@@ -19,21 +19,28 @@ function getState(state) {
         })
 };
 
-function getWeather(cityName) {
-    fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=89104d923bea4d5ae43cfd42a60778d4&units=imperial')
+function getWeather(postalCode) {
+    console.log(postalCode);
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + postalCode + '&appid=89104d923bea4d5ae43cfd42a60778d4&units=imperial')
         .then(function (response) {
             return response.json();
         })
         .then(function (weather) {
             console.log(weather);
             $('.modal-card-body').empty();
+            if (weather.cod === '404') {
+                throw Error('<h2>No Weather Data Found</h2>');
+            }
             weather.list.forEach(function (weatherObject) {
                 if (moment.unix(weatherObject.dt).format("H") === "13") {
                     console.log(weatherObject.main.temp);
                     createCard(weatherObject);
                 }
-
+                
             })
+        })
+        .catch(function (error) {
+            $('.modal-card-body').html(error.message);
         })
 };
 
@@ -71,39 +78,28 @@ function createList(parksData) {
         if(park.images.length){    
         button.data('image', park.images[0].url);
         } else {
-            button.data('image', 'data:image/jpeg;base64,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');
+            button.data('image', 'https://www.nps.gov/common/commonspot/templates/images/graphics/404/01.jpg');
         }
         if(park.fullName.length) {
         button.data('title', park.fullName);
-        } else {
-
         }
         if(park.description) {
         button.data('description', park.description);
-        } else {
-
         }
         if(park.contacts.length) {
         button.data('phone', 'Phone Number: ' + park.contacts.phoneNumbers[0].phoneNumber);
-        } else {
-
         }
         if(park.url) {
         button.data('link', park.url);
-        } else {
-
         }
         if(park.addresses.length) {
-        button.data('city', park.addresses[0].postalCode.split('-')[0]);
+        button.data('postalCode', park.addresses[0].postalCode.split('-')[0]);
         button.data('address', 'Address: ' + JSON.stringify(park.addresses[0].line1 + ', ' + park.addresses[0].city + ', ' + park.addresses[0].stateCode + ' ' + park.addresses[0].postalCode));
-        } else {
-            
         }
         li.append(button);
         items.append(li);
     }
     $('#parks-list').html(items);
-
 }
 
 function renderHistory() {
@@ -136,10 +132,10 @@ $("#parks-list").on("click", '.parkBtn', function () {
     $('#address').text($(this).data('address'));
     $('#phoneNumber').text($(this).data('phone'));
     $('#webSite').attr('href', $(this).data('link')).text('Go To The Website');
-    if ($(this).data('city')) {
-        getWeather($(this).data('city'))
+    if ($(this).data('postalCode')) {
+        getWeather($(this).data('postalCode'))
         } else {
-            $('.weatherBtn').attr(' disabled');
+            $('.weatherBtn').attr('disabled');
         };
 })
 
@@ -150,10 +146,10 @@ $('select').change(function () {
 
 $('#parks-list').on('click', '.weatherBtn', function () {
     $('.modal').addClass("is-active");
-    if ($(this).data('city')) {
-        getWeather($(this).data('city'))
+    if ($(this).data('postalCode')) {
+        getWeather($(this).data('postalCode'))
         } else {
-            $('.weatherBtn').attr(' disabled');
+            $('.weatherBtn').attr('disabled');
             $('.modal').removeClass("is-active");  
         };
     console.log("clicked")
