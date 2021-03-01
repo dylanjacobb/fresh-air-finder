@@ -228,3 +228,13 @@ li {
     align-items: center;
     flex-direction: column;
 }
+
+.modal-card {
+    width: 80%;
+}
+
+.modal-card-body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
