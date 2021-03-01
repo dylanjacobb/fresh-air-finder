@@ -94,7 +94,7 @@ function createList(parksData) {
 
         }
         if(park.addresses.length) {
-        button.data('city', park.addresses[0].postalCode);
+        button.data('city', park.addresses[0].postalCode.split('-')[0]);
         button.data('address', 'Address: ' + JSON.stringify(park.addresses[0].line1 + ', ' + park.addresses[0].city + ', ' + park.addresses[0].stateCode + ' ' + park.addresses[0].postalCode));
         } else {
             
