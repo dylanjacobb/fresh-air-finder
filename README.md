@@ -25,6 +25,8 @@ Application is interactive (accepts and responds to user input)
 - [OpenWeather API](https://openweathermap.org/forecast5)
 
 ## Images used
+- [NPS Placeholder](https://www.nps.gov/common/commonspot/templates/images/graphics/404/01.jpg)
+
 - [Caleb Fisher(hero background)](https://images.unsplash.com/photo-1609788063095-d71bf3c1f01f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80)
 
 - [Jonathan Knepper(page background)](https://images.unsplash.com/photo-1507181080368-cc2195abcde1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80)
