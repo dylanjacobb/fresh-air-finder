@@ -48,7 +48,27 @@ body {
     flex-direction: column;
 }
 
+/* style for the history div */
+.history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 20%;
+    margin: 0 auto;
+}
 
+/* style for the history buttons */
+.historyBtn {
+    color: black;
+}
+
+/* style for recent searches */
+.recentSearches {
+    text-align: center;
+    border-bottom:rgb(19, 48, 57) solid;
+    font-size: 24px;
+    margin: 8px;
+}
 
 /* changes the background image */
 .is-halfheight {

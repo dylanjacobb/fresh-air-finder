@@ -13,10 +13,10 @@ function getState() {
             createList(parksData);
             console.log(parks.data[0].description)
             if (loadHistory === null) {
-                loadHistory.push($('#state-code').val());
+                loadHistory.push(states.val());
                 localStorage.setItem('state', JSON.stringify(loadHistory));
             } else {
-                loadHistory.push($('#state-code').val());
+                loadHistory.push(states.val());
                 localStorage.setItem('state', JSON.stringify(loadHistory));
             }
         }
@@ -77,11 +77,16 @@ function createList(parksData) {
 
 if (loadHistory !== null) {
     for (var j = 0; j < loadHistory.length; j++) {
-        var historyButtons = $('<li>' + '</li>');
+        var historyButtons = $('<a>');
         historyButtons.text(loadHistory[j].toUpperCase());
+        historyButtons.attr('class', 'button historyBtn');
         $('#history').append(historyButtons);
     }
 }
+
+$('#history').on('click', '.historyBtn', function(e) {
+    e.preventDefault();
+})
 
 $("#parks-list").on("click", '.parkBtn', function () {
     $('img').attr('src', $(this).data('image'));
@@ -90,7 +95,7 @@ $("#parks-list").on("click", '.parkBtn', function () {
     $('#address').text($(this).data('address'));
     $('#phoneNumber').text($(this).data('phone'));
     $('#webSite').attr('href', $(this).data('link')).text('Go To The Website');
-    // getWeather($(this).data('city'));
+    getWeather($(this).data('city'));
 })
 
 
