@@ -88,6 +88,11 @@ body {
     padding: 100px;
 }
 
+.has-background {
+    background-color: red;
+    
+}
+
 #state-code {
     border-radius: 6px;
 }
@@ -104,7 +109,7 @@ body {
 #parks-list {
     width: 100%;
     border-radius: 10px;
-    background-image: url('https://images.unsplash.com/photo-1479658744930-03854858a953?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzZ8fGdyZWVufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
+    background-image: url('https://images.unsplash.com/photo-1541138858526-9f296df15693?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2251&q=80');
     background-size: cover;
     background-position-y: center;
     
@@ -130,3 +135,46 @@ li {
     color: white;
     padding: 50px;
 }
+
+#state {
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.8s;
+    border-radius: 10px;
+}
+
+#state:hover {      background-color: #c45f37;      color: white; }
+
+.weatherBtn {
+    background-color: #3273dc;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    padding-left: 20px;
+    padding: 12px;
+    border-radius: 20px;
+}
+
+.parkBtn {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding-right: 24px;
+}
+
+#parks-list > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#state-code {
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.8s;
+}
+#state-code:hover {      background-color: #c45f37;      color: white; }
