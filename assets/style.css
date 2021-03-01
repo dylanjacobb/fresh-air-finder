@@ -40,12 +40,21 @@ body {
 }
 
 /* centers the heroes including the search bars */
-.is-success {
+.hero{
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: #fff;
+}
+
+.director {
+    color: #fff;
+}
+
+.director:hover {
+    color: #fff;
 }
 
 /* style for the history div */
