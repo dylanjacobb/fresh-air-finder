@@ -236,3 +236,13 @@ li {
     justify-content: space-evenly;
     align-items: baseline;
 }
+
+@media screen and (max-width: 768px) {
+    #parks-list, .modal-card-body, .historyBtn {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+    }
+}
