@@ -38,9 +38,9 @@ Application is interactive (accepts and responds to user input)
 - [Deployed Application](https://dylanjacobb.github.io/fresh-air-finder/)
 
 ## Screenshots of Application
-![Homepage](./images/homepage-faf.png)
-![Parks](./images/list-of-parks.png)
-![Descriptions](./images/park-description.png)
+![Homepage](https://github.com/dylanjacobb/fresh-air-finder/blob/main/images/homepage-new.png)
+![Parks](https://github.com/dylanjacobb/fresh-air-finder/blob/main/images/list-of-parks-new.png)
+![Descriptions](https://github.com/dylanjacobb/fresh-air-finder/blob/main/images/park-description-new.png)
 ![Weather Modal](./images/weather-modal.png)
 
 ## Team's GitHub Accounts
