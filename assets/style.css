@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    right:0;
 }
 
 body {
@@ -10,6 +11,8 @@ body {
     background-position: center;
     width: 100%;
     background-size: cover;
+    background-position-x: left;
+    background-position-x:left;
     margin: 0 auto;
 }
 
@@ -93,7 +96,7 @@ body {
     padding: 8px;
 }
 
-/* changes the background image */
+/* changes the main header background image */
 .is-halfheight {
     background-image: url('https://images.unsplash.com/photo-1609788063095-d71bf3c1f01f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80');
     width: 100%;
@@ -105,11 +108,10 @@ body {
 }
 
 .middle-tile {
-    background-image: url('https://images.unsplash.com/photo-1607743882420-4412ee605bac?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80');
+    background-image: url('https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
     background-size: cover;
     background-position: center;
     padding: 100px;
-    background-color: rgb(28,57,70);
 }
 
 #middle-image {
@@ -128,16 +130,14 @@ body {
 
 #parks-list {
     width: 100%;
-    background-image: url('https://images.unsplash.com/photo-1541138858526-9f296df15693?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2251&q=80');
-    background-size: cover;
-    background-position-y: center;
-    
+    margin-bottom: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 li {
-    color: rgb(225, 200, 169);
     padding: 2px;
-    margin: 2px;
+    margin: 1.5px;
 }
 
 /* hides the dropdown arrow */
@@ -149,7 +149,8 @@ li {
     margin-top: 50px;
     background-color: rgb(28,57,70);
     color: white;
-    padding: 50px;
+    padding: 75px;
+    margin-top: 150px;
 }
 
 .strong-title {
@@ -166,7 +167,9 @@ li {
     border-radius: 10px;
 }
 
-#state:hover {      background-color: #c45f37;      color: white; }
+#state:hover {
+    background-color: #c45f37;
+    color: white; }
 
 .weatherBtn {
     background-color: #3273dc;
@@ -185,10 +188,6 @@ li {
     color: white; 
 }
 
-.parkBtn:hover {
-    opacity: 0.8;   
-}
-
 .parkBtn:active {
     box-shadow: 0 0 0 2px black inset;
 }
@@ -197,11 +196,17 @@ li {
     background: white;
     border: none;
     font-size: 20px;
-    padding: 10px;
+    padding: 5px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     color: black;
     cursor: pointer;
+    padding-left: 10px;
+    transition: 0.5s;
+}
+
+.parkBtn:hover {
+    opacity: 0.8;   
 }
 
 #state-code {
@@ -209,6 +214,7 @@ li {
     font-size: 16px;
     cursor: pointer;
     border-radius: 6px;
+    transition: 0.6s;
 }
 #state-code:hover {
     background-color: #c45f37;
